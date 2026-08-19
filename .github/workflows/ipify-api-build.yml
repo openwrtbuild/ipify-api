@@ -22,9 +22,6 @@ jobs:
       with:
         go-version: '1.8'
 
-    - name: Install dependencies
-      run: go get .
-
     - name: Print Current Directory
       run: |
         pwd
