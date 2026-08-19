@@ -37,4 +37,4 @@ jobs:
         cd go/src
         CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build
       env:
-        GOPATH: /home/runner/work/ipify-api/ipify-api/go:/home/runner/work/ipify-api/ipify-api/go/src
+        GOPATH: /home/runner/work/ipify-api/ipify-api/go
