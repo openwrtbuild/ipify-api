@@ -8,9 +8,9 @@
 package main
 
 import (
-	"github.com/julienschmidt/httprouter"
-	"github.com/rdegges/ipify-api/api"
-	"github.com/rs/cors"
+	"vendor/github.com/julienschmidt/httprouter"
+	"api"
+	"vendor/github.com/rs/cors"
 	"log"
 	"net/http"
 	"os"
