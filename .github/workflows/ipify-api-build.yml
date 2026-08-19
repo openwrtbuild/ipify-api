@@ -25,7 +25,7 @@ jobs:
         go-version: '1.8'
 
     - name: Install dependencies
-      run: github.com/openwrtbuild/godep
+      run: github.com/tools/godep
       env:
         GOPATH: /home/runner/work/ipify-api/ipify-api/go
 
@@ -37,7 +37,7 @@ jobs:
     - name: Build
       run: |
         cd ./go/src
-        go get github.com/openwrtbuild/godep
+        go get github.com/tools/godep
         CGO_ENABLED=0 GOOS=linux GOARCH=arm64 godep go build
       env:
         GOPATH: /home/runner/work/ipify-api/ipify-api/go
