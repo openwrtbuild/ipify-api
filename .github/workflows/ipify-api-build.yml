@@ -25,7 +25,9 @@ jobs:
         go-version: '1.8'
 
     - name: Install dependencies
-      run: go get github.com/tools/godep/tree/v79
+      run: go get github.com/tools/godep
+      env:
+        GOPATH: /home/runner/work/ipify-api/ipify-api/go
 
     - name: Print Current Directory
       run: |
