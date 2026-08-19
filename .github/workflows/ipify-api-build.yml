@@ -33,13 +33,14 @@ jobs:
     - name: Print Current Directory
       run: |
         pwd
-        ls -l go/src/vendor
+        ls -l go/src/vendor/github.com
 
     - name: Build
       run: |
-        cd ./go
+        cd ./go/src
+        godep save
         ls -l ../
-        CGO_ENABLED=0 GOOS=linux GOARCH=arm64 bin/godep go build
+        CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build
       env:
         GOPATH: /home/runner/work/ipify-api/ipify-api/go
         GO15VENDOREXPERIMENT: 1
