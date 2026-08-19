@@ -37,7 +37,7 @@ jobs:
 
     - name: Build
       run: |
-        cd ./go/src
+        cd ./go
         ls -l ../
         CGO_ENABLED=0 GOOS=linux GOARCH=arm64 ../bin/godep go build
       env:
