@@ -28,4 +28,6 @@ jobs:
         ls -l
 
     - name: Build
-      run: CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build
+      run: |
+        export GOPATH=`pwd`
+        CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build
