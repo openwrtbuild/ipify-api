@@ -37,6 +37,7 @@ jobs:
 
     - name: Build
       run: |
+        apt install git
         cd ./go/src
         ../bin/godep restore
         ../bin/godep save
