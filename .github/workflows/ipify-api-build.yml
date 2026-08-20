@@ -37,9 +37,8 @@ jobs:
 
     - name: Build
       run: |
-        apt install git
+        git --version
         cd ./go/src
-        ../bin/godep restore
         ../bin/godep save
         ls -l ../
         CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build
